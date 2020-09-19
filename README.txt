@@ -1,3 +1,5 @@
 Name: Shehrebanu Rashik
-Date: 4 September 2020
-I have added the backtracking algorithm inside of the code. However, when I run it, the program runs into an error. Without it, the program replaces all of the zeroes with different numbers.
+Date: September 18, 2020;
+
+The runtime is BigO(n^2) because there is a double for loop in the mindeletion function.
+The space complexity is Constant because I am copying the same array multiple times and changing those values. 
