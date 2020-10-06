@@ -7,10 +7,7 @@ public class SortColumns
 
 
 	public SortColumns()
-	{
-
-
-		
+	{	
 
 	}
 	public static void main(String[] args) 
@@ -18,7 +15,7 @@ public class SortColumns
 		String [] array = {"abdc","jklm"};
 		int [] index = {1,2,4,6};
 		SortColumns s = new SortColumns();
-		System.out.println(s.minDeletionSize(array,index));
+		System.out.println(s.minDeletionSize(array));
 
 
 
@@ -26,33 +23,27 @@ public class SortColumns
 	}
 
 
-	public List<Integer> minDeletionSize(String [] array,int [] index)
+	public List<Integer> minDeletionSize(String [] array)
 	{
 
 
 		List<Integer> myList = new ArrayList<Integer>();
 
-
-		
-		for (int num:index) 
-		{
-			myList.add(num);
-		}
 		for (int x =0;x < array.length;x++) 
 		{
-			for (int y = 0; y < index.length;y++) 
+			for (int y = 0; y < array[x].length();y++) 
 			{
 				char c = array[x].charAt(y);
+				if (c > array[x].charAt(y-1)) 
+				{
+					myList.add(y-1);
+					
+				}
 				System.out.println(c);
-
 				
 			}
 
-			for (int i =0;i < myList.size();i++) 
-			{
-				myList.remove(i);
-				
-			}
+			
 
 			return myList;
 			
